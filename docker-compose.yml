@@ -1,21 +1,22 @@
-version: '3'
+---
+version: "3"
 services:
   java:
     image: manokmr1998/nareshitjava:latest
-    porsts:
-      - "8000:80"
+    ports:
+      - 8000:80
     deploy:
       replicas: 3
   devops:
     image: manokmr1998/nareshitdevops:latest
   ports:
-    - "8001:80"
+    - 8001:80
   deploy:
     replicas: 3
   datascience:
     image: manokmr1998/nareshitdatascience:latest
-  ports:
-    - "8002:80"
-  deploy:
-    replicas: 3    
+    ports:
+      - 8002:80
+    deploy: null
+    replicas: 3
 
